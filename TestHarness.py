@@ -4,19 +4,27 @@ import time
 import datetime
 import itertools
 from multiprocessing import Process, Queue
-
-
+"""
+the above imports are python imports
+"""
 import softconfigs
 import vplex_components1
 from cluster import Cluster
-
+"""
+above imports are files created by our team 
+in order to automate the tests
+"""
 from vats.settings import load
 from vats.util.poll import wait
 from vats.testcase import program, TestCase
 from vats.util.subprocess import check_output
-
+"""
+Above imports are files related to framework
+"""
 # Dictionary that maps the failure string with the description
 # and the actual failure testcase file name
+# this will be taken as inputs frm the user in .yaml file ;
+# similar to sysconfig.xml
 descMap = {
     'be_port_fail': 'BACKEND PORT FAILURE',
     'dir_fail': 'DIRECTOR FAILURE',
@@ -53,7 +61,10 @@ CntField = {
 
 
 class AsimoTestHarness(TestCase):
-
+"""
+This is a based on python's unittest library
+you can read about here https://docs.python.org/2/library/unittest.html
+"""
     @classmethod
     def setUpClass(cls):
         # Objects

@@ -1,0 +1,32 @@
+hosts:
+  dsveb159:
+    address: 10.108.65.159
+    generators:
+    - spcopa
+    is-vm: false
+    lun-limit: 200
+    mpio: powerpath
+    password: Fabxsve01
+    platform: linux
+    port-wwns:
+    - '0x10000090fa3440ca'
+    - '0x10000090fa3440cb'
+    - '0x10000090fa343fbc'
+    - '0x10000090fa343fbd'
+    - '0x210000c0dd14daf1'
+    - '0x210000c0dd14daf3'
+    static: false
+    user: root
+recoverpoint: {}
+storage-volume-globs:
+- '*'
+vcenters: {}
+vplex-system:
+  management-servers:
+    '0':
+      address: 10.108.69.146
+      password: Mi@Dim7T
+      root-password: YN@hop8
+      user: service
+  system-name: Dart
+
